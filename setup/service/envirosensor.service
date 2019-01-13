@@ -1,0 +1,18 @@
+# Envirosensor service configuration for 
+
+[Unit]
+Description=Environmental Sensor
+
+[Service]
+Type=simple
+# Call wrapper for python script on service start and stop
+ExecStart=/usr/bin/envirosensor.sh start
+ExecStop=/usr/bin/envirosensor.sh stop
+# Service priority and restart frequency
+Nice=-20
+Restart=always
+RestartSec=3
+
+[Install]
+# Start service on boot
+WantedBy=multi-user.target
