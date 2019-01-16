@@ -114,7 +114,7 @@ This is done when SSH is not available as when using the Universities free wifi 
 **Note:** You may not be able to the flash directory right away as the flash drive may be busy, but you should be able to after restarting the device.
 9. Go to step 5 in the section on Loading Files Wirelessly above to run the envirosensor setup script.
 
-## Editing code:
+## Editing Code
 Code can be edited using a suitable text editor such as Sublime text on WinSCP or Nano text editor via Putty.
 1. Make sure the services are stopped – `systemctl stop <name of service>`.
 2. Check service has stopped by confirming status – `systemctl status <name of service>`.
@@ -129,14 +129,14 @@ c. Caused by hitting CTRL + Z to stop processes.
 8.	To stop the script type `CTRL+C` or else `CTRL+Z` if that doesn’t work.
 9.	If there are issues with your script check that the files on the Edison are Unix encoded using sublime text and make sure spaces are used for indentation rather than tabs.
  
-## Troubleshooting Services:
+## Troubleshooting Services
 1.	Enable volatile logging with journalctl by navigating to `/etc/systemd` in the file system.
 2.	Open `journald.conf` with your text editor.
 3.	Change the Storage parameter value from `none to Storage=volatile` in order to temporarily store the logs in memory.
 4.	The command `systemctl status <name of service> -l` will provide additional logging.
 5.	The command `journalctl -u <name of service>.service` will provide logs for the particular service. Additional filters can be added such as `--since today` etc.
 
-# Acknowledgements:
+# Acknowledgements
 Thank you to the [Intel Collaborative Research Institute (ICRI) for Urban IoT](http://cities.io/) for providing the Envirosensor platform.
 Special thanks to ICRI researchers Duncan Wilson, Sarah Gallacher and Sokratis Kartakis for technical support and advice.
 Thanks also to the [Future Cities Catapult](https://futurecities.catapult.org.uk/) at the Urban Innovation Centre in London for use of their maker space facilities during the construction and testing of the devices.
